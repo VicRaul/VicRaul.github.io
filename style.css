@@ -27,48 +27,196 @@ header img {
     height: 100%;
 }
 
+/* Foto de perfil */
+.foto_perfil {
+    position: absolute;
+    top: 100px; /* Ajusta según el tamaño del encabezado */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.foto_perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Encabezado de texto */
+.encabezado {
+    text-align: center;
+    margin-top: 20px; /* Ajusta según el tamaño de la foto de perfil */
+}
+
+.encabezado h1 {
+    font-size: 2em;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.encabezado p {
+    font-size: 1.1em;
+    font-style: italic;
+    margin-top: 1px;
+    margin-bottom: 3px;
+    color: #666;
+}
+
+/* Sección principal */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 5px; /* Espacio entre encabezado y contenido */
+}
+
+h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Pie de página */
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Imagen del pie de página */
+footer img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Botones de contacto */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre botones */
+    margin-top: 15px; /* Separación del botón respecto a la imagen */
+}
+
+/* Estilo del botón de WhatsApp */
+.whatsapp-button {
+    display: inline-block;
+    background-color: #d40000; /* Color de fondo rojo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #000; /* Borde negro */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    font-size: 1.2em; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+/* Icono de WhatsApp */
+.whatsapp-button i {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Estilo del botón de LinkedIn */
+.linkedin-button {
+    display: inline-block;
+    background-color: #0077b5; /* Color de fondo azul LinkedIn */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #000; /* Borde negro */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    font-size: 1.2em; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+/* Icono de LinkedIn */
+.linkedin-button i {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+/* Efectos de hover (al pasar el mouse por encima) para ambos botones */
+.whatsapp-button:hover, .linkedin-button:hover {
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño */
+}
+
+/* Efecto hover específico para el botón de WhatsApp */
+.whatsapp-button:hover {
+    background-color: #06833a; /* Color más oscuro al pasar el mouse */
+}
+
+/* Efecto hover específico para el botón de LinkedIn */
+.linkedin-button:hover {
+    background-color: #071abe; /* Color más oscuro al pasar el mouse */
+}
+
+/* Efectos de clic */
+.whatsapp-button:active, .linkedin-button:active {
+    transform: scale(1); /* Volver al tamaño original */
+}
+
 
 /* Estilos Responsivos para dispositivos móviles */
 @media (max-width: 768px) {
-  /* Ajustar el encabezado */
-  header {
-    max-width: 100%;
+    /* Ajustar el encabezado */
+    header {
+      max-width: 100%;
+    }
+  
+    /* Foto de perfil más pequeña y ajustada para móviles */
+    .foto_perfil {
+      width: 100px;
+      height: 100px;
+      top: 80px; /* Ajustar la posición para evitar que se superponga al texto */
+    }
+  
+    /* Ajustar el margen superior del encabezado de texto */
+    .encabezado {
+      margin-top: 150px; /* Dejar suficiente espacio para la imagen de perfil */
+    }
+  
+    /* Ajustar el tamaño del texto */
+    .encabezado h1 {
+      font-size: 1.5em; /* Reducir ligeramente el tamaño de la fuente en pantallas pequeñas */
+    }
+  
+    .encabezado p {
+      font-size: 1em; /* Ajustar el tamaño del subtítulo */
+    }
+  
+    /* Ajustar el ancho del contenedor principal */
+    main {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    /* Ajustar el tamaño de los botones en móviles */
+    .contact-buttons {
+      flex-direction: column; /* Colocar los botones en columna */
+      gap: 5px;
+    }
+  
+    .whatsapp-button, .linkedin-button {
+      width: 100%; /* Los botones ocupan todo el ancho en móviles */
+    }
   }
-
-  /* Foto de perfil más pequeña y ajustada para móviles */
-  .foto_perfil {
-    width: 100px;
-    height: 100px;
-    top: 80px; /* Ajustar la posición para evitar que se superponga al texto */
-  }
-
-  /* Ajustar el margen superior del encabezado de texto */
-  .encabezado {
-    margin-top: 150px; /* Dejar suficiente espacio para la imagen de perfil */
-  }
-
-  /* Ajustar el tamaño del texto */
-  .encabezado h1 {
-    font-size: 1.5em; /* Reducir ligeramente el tamaño de la fuente en pantallas pequeñas */
-  }
-
-  .encabezado p {
-    font-size: 1em; /* Ajustar el tamaño del subtítulo */
-  }
-
-  /* Ajustar el ancho del contenedor principal */
-  main {
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  /* Ajustar el tamaño de los botones en móviles */
-  .contact-buttons {
-    flex-direction: column; /* Colocar los botones en columna */
-    gap: 5px;
-  }
-
-  .whatsapp-button, .linkedin-button {
-    width: 100%; /* Los botones ocupan todo el ancho en móviles */
-  }
-}
