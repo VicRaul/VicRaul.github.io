@@ -39,12 +39,12 @@ header img {
   .foto_perfil {
     width: 100px;
     height: 100px;
-    top: 120px; /* Aumentar espacio superior para evitar superposición */
+    top: 80px; /* Ajustar la posición para evitar que se superponga al texto */
   }
 
   /* Ajustar el margen superior del encabezado de texto */
   .encabezado {
-    margin-top: 180px; /* Dejar suficiente espacio para la imagen de perfil */
+    margin-top: 150px; /* Dejar suficiente espacio para la imagen de perfil */
   }
 
   /* Ajustar el tamaño del texto */
