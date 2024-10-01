@@ -27,6 +27,53 @@ header img {
     height: 100%;
 }
 
+
+/* Estilos Responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Ajustar el encabezado */
+  header {
+    max-width: 100%;
+  }
+
+  /* Foto de perfil más pequeña y ajustada para móviles */
+  .foto_perfil {
+    width: 100px;
+    height: 100px;
+    top: 80px; /* Ajustar la posición para evitar que se superponga al texto */
+  }
+
+  /* Ajustar el margen superior del encabezado de texto */
+  .encabezado {
+    margin-top: 150px; /* Dejar suficiente espacio para la imagen de perfil */
+  }
+
+  /* Ajustar el tamaño del texto */
+  .encabezado h1 {
+    font-size: 1.5em; /* Reducir ligeramente el tamaño de la fuente en pantallas pequeñas */
+  }
+
+  .encabezado p {
+    font-size: 1em; /* Ajustar el tamaño del subtítulo */
+  }
+
+  /* Ajustar el ancho del contenedor principal */
+  main {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Ajustar el tamaño de los botones en móviles */
+  .contact-buttons {
+    flex-direction: column; /* Colocar los botones en columna */
+    gap: 5px;
+  }
+
+  .whatsapp-button, .linkedin-button {
+    width: 100%; /* Los botones ocupan todo el ancho en móviles */
+  }
+}
+
+
 /* Foto de perfil */
 .foto_perfil {
     position: absolute;
